@@ -13,5 +13,5 @@
   roles:
     - user-sdn
     - brctl
-    - java8-oracle
+    - java8-openjdk
     - lxc
