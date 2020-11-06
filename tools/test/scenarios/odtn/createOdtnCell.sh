@@ -19,7 +19,7 @@ echo "The public key in local host is: $SSH_KEY"
 ATOMIX_IMAGE=atomix/atomix:3.1.5
 for i in {1..3}; do
     echo "Setting up atomix-$i..."
-    docker container run --detach --name atomix-$i --hostname atomix-$i \
+    docker run --detach --name atomix-$i --hostname atomix-$i \
         --restart=always -v /home/sdn/onos/tools/tutorials/vm/config:/atomix/config $ATOMIX_IMAGE \
         --config /atomix/config/atomix-$i.conf
 done
@@ -29,7 +29,7 @@ wait
 ONOS_IMAGE=onos:latest
 for i in {1..3}; do
     echo "Setting up onos-$i..."
-    docker container run --detach --name onos-$i --hostname onos-$i --restart=always $ONOS_IMAGE
+    docker run --detach --name onos-$i --hostname onos-$i --restart=always $ONOS_IMAGE
     docker exec -i onos-$i /bin/bash -c "mkdir config; cat > config/cluster.json" < $ONOS_ROOT/tools/tutorials/vm/config/cluster-$i.json
     docker exec -i onos-$i /bin/bash -c "touch /root/onos/apache-karaf-${KARAF_VERSION}/etc/keys.properties"
     docker exec -i onos-$i /bin/bash -c "echo 'sdn=$SSH_KEY,_g_:admingroup' >> /root/onos/apache-karaf-${KARAF_VERSION}/etc/keys.properties"
@@ -44,7 +44,7 @@ function waitForStart {
     sleep 5
     for i in {1..3}; do
         echo "Waiting for onos-$i startup..."
-        ip=$(docker container inspect onos-$i | grep \"IPAddress | cut -d: -f2 | sort -u | tr -d '", ')
+        ip=$(docker inspect onos-$i | grep \"IPAddress | cut -d: -f2 | sort -u | tr -d '", ')
         echo "IP is: $ip"
     for t in {1..60}; do
         echo "$t-th times curl request"
@@ -57,9 +57,9 @@ function waitForStart {
 }
 
 # Extract the IP addresses of the ONOS nodes
-export OC1=$(docker container inspect onos-1 | grep \"IPAddress | cut -d: -f2 | sort -u | tr -d '", ')
-export OC2=$(docker container inspect onos-2 | grep \"IPAddress | cut -d: -f2 | sort -u | tr -d '", ')
-export OC3=$(docker container inspect onos-3 | grep \"IPAddress | cut -d: -f2 | sort -u | tr -d '", ')
+export OC1=$(docker inspect onos-1 | grep \"IPAddress | cut -d: -f2 | sort -u | tr -d '", ')
+export OC2=$(docker inspect onos-2 | grep \"IPAddress | cut -d: -f2 | sort -u | tr -d '", ')
+export OC3=$(docker inspect onos-3 | grep \"IPAddress | cut -d: -f2 | sort -u | tr -d '", ')
 export ONOS_INSTANCES="\"$OC1 $OC2 $OC3\""
 
 waitForStart
