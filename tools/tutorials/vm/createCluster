@@ -46,4 +46,3 @@ waitForStart
 echo "Activating OpenFlow and ProxyARP applications..."
 onos $OC1 app activate org.onosproject.openflow proxyarp layout
 onos $OC1
-
