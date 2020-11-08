@@ -1,4 +1,4 @@
-#!/usr/bin/env python
+#!/usr/bin/env python2.7
 #
 # This script finds an open staging repository, checks that it contains an
 # expected artifact, attemps to close the repository, and checks that it is closed.

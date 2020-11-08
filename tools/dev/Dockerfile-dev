@@ -20,7 +20,7 @@ COPY onos.tar.gz /src/onos/
 WORKDIR /src/onos
 RUN apt-get update && \
         DEBIAN_FRONTEND=noninteractive \
-        apt-get install -y zip python git bzip2 build-essential && \
+        apt-get install -y zip python2.7 git bzip2 build-essential && \
         export ONOS_ROOT=/src/onos && \
         mkdir -p /src/tar && \
         cd /src/tar && \

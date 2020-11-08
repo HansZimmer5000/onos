@@ -1,4 +1,4 @@
-#!/usr/bin/env python
+#!/usr/bin/env python2.7
 """
 usage: atomix-gen-config [-h] [-s PARTITION_SIZE] [-n NUM_PARTITIONS]
                          [node_ip] [filename] [node_ip [node_ip ...]]

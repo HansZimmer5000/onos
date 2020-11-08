@@ -1,4 +1,4 @@
-#!/usr/bin/env python
+#!/usr/bin/env python2.7
 '''
   Builds synthetic feature file that includes all core, provider, and application
   features, so that we can pre-stage all bundles required to run ONOS off-line.

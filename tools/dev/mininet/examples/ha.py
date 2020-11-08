@@ -1,4 +1,4 @@
-#!/usr/bin/env python
+#!/usr/bin/env python2.7
 
 """
 NOTES
@@ -195,8 +195,8 @@ class HTTP( Host ):
 
     def start( self ):
         output( "(starting HTTP Server)" )
-        # start python web server as a bg process
-        self.cmd( 'python -m SimpleHTTPServer &> web.log &' )
+        # start python2.7 web server as a bg process
+        self.cmd( 'python2.7 -m SimpleHTTPServer &> web.log &' )
 
     def stop( self ):
         # XXX is this ever called?

@@ -1,4 +1,4 @@
-# -*- mode:python; -*-
+# -*- mode:python2.7; -*-
 #
 # Copyright 2016 The Bazel Authors. All rights reserved.
 #

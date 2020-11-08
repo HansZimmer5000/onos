@@ -1,4 +1,4 @@
-#!/usr/bin/env python
+#!/usr/bin/env python2.7
 
 from mininet.cli import CLI
 from mininet.log import setLogLevel

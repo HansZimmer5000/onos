@@ -1,4 +1,4 @@
-#!/usr/bin/env python
+#!/usr/bin/env python2.7
 # Splits ONOS DEBUG logs by partition/session for debugging consistent primitives.
 # When logs are split, this script will create a separate log file for each partition
 # and each Atomix session, e.g. karaf.log.partition-1, karaf.log.session-10, etc.

@@ -1,4 +1,4 @@
-#!/usr/bin/env python
+#!/usr/bin/env python2.7
 
 # -----------------------------------------------------------------------------
 # Invokes the ONOS CLI and looks for a 'maps' entry with the given name

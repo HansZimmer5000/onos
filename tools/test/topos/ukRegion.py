@@ -1,4 +1,4 @@
-#!/usr/bin/env python
+#!/usr/bin/env python2.7
 
 """
   Sample network for demonstrating regions (see uk-region.json)

@@ -1,4 +1,4 @@
-#!/usr/bin/env python
+#!/usr/bin/env python2.7
 """
 usage: onos-dist-verify [-h] [-n PRIMITIVE_NAME] [-p PARALLELISM]
                         [-c OPERATION_COUNT]

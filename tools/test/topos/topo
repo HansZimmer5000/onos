@@ -7,4 +7,4 @@ cd $(dirname $0)
 topo=${1:-att-onos.py}
 
 [ -n "$1" ] && shift
-sudo python $topo "$@"
+sudo python2.7 $topo "$@"

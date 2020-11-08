@@ -1,4 +1,4 @@
-#!/usr/bin/python
+#!/usr/bin/python2.7
 
 """
 onos.py: ONOS cluster and control network in Mininet
@@ -25,7 +25,7 @@ because Mininet's Switch() class does't (yet?) handle
 controllers with multiple IP addresses directly.
 
 The classes may also be imported and used via Mininet's
-python API.
+python2.7 API.
 
 Bugs/Gripes:
 - We need --switch onosuser for the user switch because

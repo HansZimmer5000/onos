@@ -1,4 +1,4 @@
-#!/usr/bin/python
+#!/usr/bin/python2.7
 
 from opticalUtils import MininetOE, LINCSwitch, LINCLink
 from mininet.topo import Topo
@@ -379,7 +379,7 @@ if __name__ == '__main__':
     if len( sys.argv ) >= 2:
         controllers = sys.argv[1:]
     else:
-        print 'Usage: sudo -E python opticalTestBig.py (<Controller IP>)+'
+        print 'Usage: sudo -E python2.7 opticalTestBig.py (<Controller IP>)+'
         print 'Using localhost...\n'
         controllers = [ '127.0.0.1' ]
 

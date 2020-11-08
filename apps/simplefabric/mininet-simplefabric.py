@@ -1,4 +1,4 @@
-#!/usr/bin/python
+#!/usr/bin/python2.7
 # Mininet model for Simple Leaf-Spine Network
 
 # Copyright 2017-present Open Networking Foundation

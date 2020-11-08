@@ -1,4 +1,4 @@
-#!/usr/bin/python
+#!/usr/bin/python2.7
 
 """
 multicluster.py: multiple ONOS clusters example

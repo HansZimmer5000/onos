@@ -1,4 +1,4 @@
-#!/usr/bin/python
+#!/usr/bin/python2.7
 
 from mininet.topo import Topo
 from mininet.net import Mininet

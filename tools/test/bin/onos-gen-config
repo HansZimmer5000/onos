@@ -1,4 +1,4 @@
-#!/usr/bin/env python
+#!/usr/bin/env python2.7
 """
 usage: onos-gen-config [-h] [-s PARTITION_SIZE] [-n NUM_PARTITIONS]
                             [filename] [node_ip [node_ip ...]]

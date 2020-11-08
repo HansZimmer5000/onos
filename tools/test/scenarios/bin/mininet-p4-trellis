@@ -19,7 +19,7 @@ ssh -tt ${remote} "
     echo \"cd ~/routing/trellis && \
         sudo -E env PYTHONPATH=/tmp/bmv2_py STRATUM_ROOT=${stratumRoot} \
             ONOS_WEB_USER=$ONOS_WEB_USER ONOS_WEB_PASS=$ONOS_WEB_PASS \
-        python trellisp4.py --onos-ip $OC1 --agent stratum\" \
+        python2.7 trellisp4.py --onos-ip $OC1 --agent stratum\" \
     > ${trellisp4Sh} && chmod +x ${trellisp4Sh}
 "
 

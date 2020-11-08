@@ -9,4 +9,4 @@
 APP=onos-app-oecfg
 JAR=$M2_REPO/org/onosproject/$APP/$ONOS_POM_VERSION/$APP-$ONOS_POM_VERSION.jar
 
-java -jar $JAR < $1 | python -mjson.tool
+java -jar $JAR < $1 | python2.7 -mjson.tool
