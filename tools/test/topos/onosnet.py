@@ -258,7 +258,7 @@ def run( topo, controllers=None, link=TCLink, autoSetMacs=True):
             error('*** WARNING no such netcfg file: %s\n' % args.netcfgJson)
         else:
             info('*** Setting netcfg: %s\n' % args.netcfgJson)
-            call(("onos-netcfg", onosAddr, args.netcfgJson))
+            call(("/home/onos/onos/tools/package/runtime/bin/onos-netcfg", onosAddr, args.netcfgJson))
 
     cli( net )
     net.stop()
